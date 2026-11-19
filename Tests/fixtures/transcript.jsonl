@@ -1,0 +1,10 @@
+{"type":"ai-title","aiTitle":"Agent huddle corner widget","sessionId":"s1"}
+{"type":"last-prompt","lastPrompt":"fix the date filter","leafUuid":"u1","sessionId":"s1"}
+{"type":"assistant","isSidechain":false,"timestamp":"2026-11-17T13:50:01.123Z","message":{"role":"assistant","content":[{"type":"thinking","thinking":"Look at the filter"}]},"sessionId":"s1","cwd":"/Users/x"}
+{"type":"assistant","isSidechain":false,"timestamp":"2026-11-17T13:50:02.123Z","message":{"role":"assistant","content":[{"type":"tool_use","id":"toolu_1","name":"Grep","input":{"pattern":"dateRange"}}]},"sessionId":"s1","cwd":"/Users/x"}
+{"type":"assistant","isSidechain":false,"timestamp":"2026-11-17T13:50:03.123Z","message":{"role":"assistant","content":[{"type":"tool_use","id":"toolu_2","name":"Read","input":{"file_path":"/Users/x/src/dateRange.ts"}}]},"sessionId":"s1","cwd":"/Users/x"}
+{"type":"assistant","isSidechain":true,"timestamp":"2026-11-17T13:50:04.123Z","message":{"role":"assistant","content":[{"type":"tool_use","id":"toolu_3","name":"Bash","input":{"command":"ls"}}]},"sessionId":"s1","cwd":"/Users/x"}
+{"type":"assistant","isSidechain":false,"timestamp":"2026-11-17T13:50:05.123Z","message":{"role":"assistant","content":[{"type":"tool_use","id":"toolu_4","name":"Edit","input":{"file_path":"/Users/x/src/SalesFilter.tsx"}}]},"sessionId":"s1","cwd":"/Users/x"}
+{"type":"assistant","isSidechain":false,"timestamp":"2026-11-17T13:50:06.123Z","message":{"role":"assistant","content":[{"type":"text","text":"The filter was using UTC midnight."}]},"sessionId":"s1","cwd":"/Users/x"}
+{"type":"assistant","isSidechain":false,"timestamp":"2026-11-17T13:50:07.123Z","message":{"role":"assistant","content":[{"type":"tool_use","id":"toolu_5","name":"Bash","input":{"command":"npm test"}}]},"sessionId":"s1","cwd":"/Users/x"}
+this is not json {{{

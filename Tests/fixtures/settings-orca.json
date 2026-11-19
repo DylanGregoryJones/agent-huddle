@@ -1,0 +1,48 @@
+{
+  "model": "opus",
+  "env": {
+    "FOO": "bar",
+    "N": "1"
+  },
+  "statusLine": {
+    "type": "command",
+    "command": "~/.claude/statusline.sh",
+    "padding": 0
+  },
+  "skipDangerousModePermissionPrompt": true,
+  "hooks": {
+    "SessionStart": [
+      {
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -x \"${HOME-}/.orca/agent-hooks/claude-hook.sh\" ] || exit 0; printf '%s' \"{\\\"a\\\":\\\"b\\\\\\\\n\\\"}\" | \"${HOME-}/.orca/agent-hooks/claude-hook.sh\" --tag 'it'\"'\"'s' || echo $? | base64 -d; echo \"YWJjZA==\" \\\\ done"
+          }
+        ]
+      }
+    ],
+    "PreToolUse": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -x \"${HOME-}/.orca/agent-hooks/claude-hook.sh\" ] || exit 0; printf '%s' \"{\\\"a\\\":\\\"b\\\\\\\\n\\\"}\" | \"${HOME-}/.orca/agent-hooks/claude-hook.sh\" --tag 'it'\"'\"'s' || echo $? | base64 -d; echo \"YWJjZA==\" \\\\ done"
+          }
+        ]
+      }
+    ],
+    "PermissionRequest": [
+      {
+        "matcher": "*",
+        "hooks": [
+          {
+            "type": "command",
+            "command": "[ -x \"${HOME-}/.orca/agent-hooks/claude-hook.sh\" ] || exit 0; printf '%s' \"{\\\"a\\\":\\\"b\\\\\\\\n\\\"}\" | \"${HOME-}/.orca/agent-hooks/claude-hook.sh\" --tag 'it'\"'\"'s' || echo $? | base64 -d; echo \"YWJjZA==\" \\\\ done",
+            "timeout": 3600
+          }
+        ]
+      }
+    ]
+  }
+}
